@@ -44,7 +44,7 @@ module.exports = {
                     return { site };
                 },
                 pages: (objects) => {
-                    console.log('generating pages');
+                    console.log('DEBUG::  generating pages');
                     // const personObjects = objects.filter((object) => object.__metadata.modelName === 'Person' && !!object.slug);
                     // const personPages = personObjects.map((person) => {
                     //     const { __metadata, ...restProps } = person;
@@ -72,6 +72,8 @@ module.exports = {
                             ...restProps
                         };
                     });
+
+                    console.log('DEBUG::  generated pages!');
 
                     return [...pages];
                 }
